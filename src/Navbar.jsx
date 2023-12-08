@@ -26,7 +26,7 @@ const Navbar = () => {
               : { background: "none" }
           }
         >
-          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 ">
+          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 transition-all duration-300 ease-in-out">
             Home
           </p>
         </NavLink>
@@ -41,7 +41,7 @@ const Navbar = () => {
               : { background: "none" }
           }
         >
-          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 ">
+          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 transition-all duration-300 ease-in-out">
             Assignment A
           </p>
         </NavLink>
@@ -56,7 +56,7 @@ const Navbar = () => {
               : { background: "none" }
           }
         >
-          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 ">
+          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 transition-all duration-300 ease-in-out">
             Assignment B
           </p>
         </NavLink>
@@ -71,7 +71,7 @@ const Navbar = () => {
               : { background: "none" }
           }
         >
-          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 ">
+          <p className="px-3 py-1 sm:px-12 text-slate-200 hover:text-blue-500 transition-all duration-300 ease-in-out">
             Assignment C
           </p>
         </NavLink>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Bars } from "react-loader-spinner";
 import { Chart } from "react-google-charts";
-import Rocket2 from "./assets/rocket2.jpg";
+import Rocket from "./assets/rocket2.jpg";
 
 const Assignment1 = () => {
   const [sensorData, setSensorData] = useState([]);
@@ -35,14 +35,24 @@ const Assignment1 = () => {
     .filter(([key, value]) => typeof value === "number")
     .map(([key, value]) => [key, value]);
 
-  console.log(dataForChart);
+  // console.log(dataForChart);
 
-  const options = {};
+  const options = {
+    width: 400,
+    height: 120,
+    redFrom: 90,
+    redTo: 100,
+    yellowFrom: 75,
+    yellowTo: 90,
+    minorTicks: 5,
+  };
+
+  console.log(sensorData.altitude);
 
   return (
     <div
-      className="bg-cover min-h-screen bg-center bg-repeat"
-      style={{ backgroundImage: `url(${Rocket2})` }}
+      className="background-container"
+      style={{ backgroundImage: `url(${Rocket})` }}
     >
       <div className="absolute top-24 left-0 w-full h-full z-0">
         {loading ? (
@@ -58,13 +68,13 @@ const Assignment1 = () => {
             />
           </div>
         ) : (
-          <div className="text-center mt-8 sm:mt-28 mx-4  text-slate-100">
-            <div className="flex justify-center mb-4 sm:mb-0">
-              <div className=" sm:w-3/4 w-90 text-md sm:text-3xl">
+          <div className="text-center mt-16 sm:mt-44 mx-4  text-slate-100">
+            <div className="flex flex-col items-center sm:flex-row justify-center mb-4 sm:mb-0">
+              <div className=" sm:w-3/4 w-90 text-lg sm:text-4xl">
                 <div className=" font-bold">
                   ℹ️ Status Message: {sensorData.statusMessage}
                 </div>
-                <div className="mt-6 mb-2 sm:mt-12 sm:mb-4 font-bold">
+                <div className="mt-6 mb-2 sm:mt-12 sm:mb-16 font-bold">
                   {sensorData.isAscending ? (
                     <div>⬆️ Rocket currently ascending ⬆️</div>
                   ) : (
@@ -72,16 +82,73 @@ const Assignment1 = () => {
                   )}
                 </div>
               </div>
-              <div className=" flex">
+              <div className=" flex mt-8 mb-4 sm:mt-0 sm:mb-0">
                 <button
                   onClick={() => setRenderToggle(true)}
-                  className="bg-blue-500 m-2 p-2 sm:p-4 text-sm sm:text-2xl h-1/2  my-auto hover:bg-blue-600 rounded-md"
+                  className="bg-blue-500 m-2 p-2 sm:p-4 text-lg sm:text-3xl h-1/2  my-auto hover:bg-blue-600 rounded-md transition-all duration-300 ease-in-out"
                 >
                   Refresh data
                 </button>
               </div>
             </div>
 
+            <div className=" hidden sm:flex justify-evenly mt-20 mb-12">
+              <Chart
+                width={"400px"}
+                height={"300px"}
+                chartType="Gauge"
+                data={[
+                  ["Label", "Value"],
+                  ["Velocity", sensorData.velocity],
+                ]}
+                options={{
+                  redFrom: 80,
+                  redTo: 100,
+                  yellowFrom: 60,
+                  yellowTo: 80,
+                  minorTicks: 5,
+                  max: 100,
+                  min: -100,
+                }}
+              />
+
+              <Chart
+                width={"400px"}
+                height={"300px"}
+                chartType="Gauge"
+                data={[
+                  ["Label", "Value"],
+                  ["Altitude", Math.round(sensorData.altitude)],
+                ]}
+                options={{
+                  redFrom: 40,
+                  redTo: 50,
+                  yellowFrom: 30,
+                  yellowTo: 40,
+                  minorTicks: 5,
+                  max: 0,
+                  min: -50000,
+                }}
+              />
+              <Chart
+                width={"400px"}
+                height={"300px"}
+                chartType="Gauge"
+                data={[
+                  ["Label", "Value"],
+                  ["Temperature", sensorData.temperature],
+                ]}
+                options={{
+                  redFrom: 40,
+                  redTo: 50,
+                  yellowFrom: 30,
+                  yellowTo: 40,
+                  minorTicks: 5,
+                  max: 50,
+                  min: -50,
+                }}
+              />
+            </div>
             {dataForChart.map(([category, value], index) => (
               <div key={index} className="py-2 sm:py-6">
                 <Chart
