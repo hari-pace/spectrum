@@ -5,4 +5,4 @@
 <img src="https://github.com/hari-pace/spectrum/assets/139553466/4697466e-0528-49ea-97ef-6d9e392a2857" height="500px" width="1000px" />
 
 <h3> Part 2 - Also using live data retrieved via Azure-hosted WebSocket to show constantly updating data in the GUI, as well as providing alerts to the user when necessary. </h3>
-<img src="https://github.com/hari-pace/spectrum/assets/139553466/4f6f28cd-b73e-4847-a1e0-0ca31a780499" height="500px" width="1000px" />
+<img src="https://github.com/hari-pace/spectrum/assets/139553466/48d89b39-2264-43f2-a2fa-2567fcbb9625" height="500px" width="1000px" />
