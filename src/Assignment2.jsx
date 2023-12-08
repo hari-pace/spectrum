@@ -58,7 +58,6 @@ const Assignment2 = () => {
     return () => {
       clearTimeout(timeoutId);
 
-      // Close the WebSocket connection if it was established
       if (ws && ws.readyState === WebSocket.OPEN) {
         ws.close();
       }
@@ -75,9 +74,11 @@ const Assignment2 = () => {
         "https://webfrontendassignment-isaraerospace.azurewebsites.net/api/ActOnSpectrum",
         {
           method: "POST",
-          body: JSON.stringify({
-            key: "value",
-          }),
+          // doesn't work
+
+          // body: JSON.stringify({
+          //   key: "value",
+          // }),
           headers: {
             "Content-type": "application/json; charset=UTF-8",
           },

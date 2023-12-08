@@ -1,6 +1,6 @@
 import React from "react";
 
-import Rocket5 from "./assets/rocket5.jpg";
+import Rocket from "./assets/rocket5.jpg";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
@@ -8,7 +8,7 @@ const Homepage = () => {
     <>
       <div
         className="bg-cover h-screen"
-        style={{ backgroundImage: `url(${Rocket5})` }}
+        style={{ backgroundImage: `url(${Rocket})` }}
       >
         <div className="flex flex-wrap h-full text-white justify-around pt-24 sm:pt-48">
           <div>

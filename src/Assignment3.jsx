@@ -1,12 +1,12 @@
 import React from "react";
-import Rocket6 from "./assets/rocket6.jpg";
+import Rocket from "./assets/rocket6.jpg";
 
 const Assignment3 = () => {
   return (
     <div
       className="relative min-h-screen"
       style={{
-        backgroundImage: `url(${Rocket6})`,
+        backgroundImage: `url(${Rocket})`,
         backgroundSize: "cover",
       }}
     >

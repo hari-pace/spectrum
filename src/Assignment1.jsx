@@ -37,18 +37,6 @@ const Assignment1 = () => {
 
   // console.log(dataForChart);
 
-  const options = {
-    width: 400,
-    height: 120,
-    redFrom: 90,
-    redTo: 100,
-    yellowFrom: 75,
-    yellowTo: 90,
-    minorTicks: 5,
-  };
-
-  console.log(sensorData.altitude);
-
   return (
     <div
       className="background-container"
