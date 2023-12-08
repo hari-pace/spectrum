@@ -136,7 +136,7 @@ const Assignment2 = () => {
                   </div>
                 )}
                 <button
-                  className="bg-blue-500 sm:text-xl py-2 px-4 sm:px-8 sm:py-4 hover:bg-blue-600 rounded transition-all duration-300 ease-in-out"
+                  className="bg-blue-500 text-lg sm:text-3xl py-2 px-4 sm:px-8 sm:py-4 hover:bg-blue-600 rounded transition-all duration-300 ease-in-out"
                   onClick={handleActionOnSpectrum}
                 >
                   Act on Spectrum
