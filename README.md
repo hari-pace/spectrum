@@ -3,6 +3,7 @@
 <h2>Created using React and TailwindCSS</h2>
 <h2>Link to deployed project website: https://spectrum-assignment.netlify.app/</h2>
 
+<h3>Homepage</h3>
 <img src="https://github.com/hari-pace/spectrum/assets/139553466/bd661728-f7ed-42ad-98a4-929b1d31094e" height="400px" width="800px" />
 
 <h3> Part 1 - Using API data to create a GUI for a hypothetical launch vehicle flying towards Earth's orbit. Google Charts was used to create both bar charts and gauges which can be manually updated by the click of a button. </h3>
